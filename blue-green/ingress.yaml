@@ -4,7 +4,7 @@ metadata:
   name: active
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "100m"
-    nginx.ingress.kubernetes.io/app-root: /
+    # nginx.ingress.kubernetes.io/app-root: /
 spec:
   ingressClassName: nginx
   rules:
@@ -25,7 +25,7 @@ metadata:
   name: preview
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "100m"
-    nginx.ingress.kubernetes.io/app-root: /
+    # nginx.ingress.kubernetes.io/app-root: /
 spec:
   ingressClassName: nginx
   rules:
