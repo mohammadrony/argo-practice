@@ -3,8 +3,7 @@ kind: Ingress
 metadata:
   name: stable
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: "100m"
-    # nginx.ingress.kubernetes.io/app-root: /
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
 spec:
   ingressClassName: nginx
   rules:
@@ -24,8 +23,7 @@ kind: Ingress
 metadata:
   name: canary
   annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: "100m"
-    # nginx.ingress.kubernetes.io/app-root: /
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
 spec:
   ingressClassName: nginx
   rules:
