@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: canary-app
+  namespace: argocd
+spec:
+  destination:
+    namespace: canary
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: canary
+    repoURL: "https://github.com/mohammadrony/argo-practice.git"
+    targetRevision: main
+    directory:
+      recurse: true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
