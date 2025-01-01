@@ -23,8 +23,6 @@ spec:
     canary:
       stableService: stable
       canaryService: canary
-      dynamicStableScale: true
-      abortScaleDownDelaySeconds: 600
       steps:
         - setWeight: 20
         - pause: {}

@@ -27,3 +27,13 @@ Dashboard
 `kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/download/$version/dashboard-install.yaml`
 
 `kubectl apply -f argo-rollouts.ingress.yaml`
+
+## Deploy Application
+
+Blue Green
+
+`argocd app create blue-green-app -f blue-green.application.yaml`
+
+Canary
+
+`argocd app create canary-app -f canary.application.yaml`
