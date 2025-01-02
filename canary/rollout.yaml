@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: rollouts-demo
-          image: quay.io/openshiftdemos/rollouts-demo:green
+          image: argoproj/rollouts-demo:blue
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -26,10 +26,6 @@ spec:
       trafficRouting:
         nginx:
           stableIngress: stable
-          # additionalIngressAnnotations:
-          #   canary-by-header: X-Canary
-          #   canary-by-header-value: "true"
-          #   canary-by-cookie: "canary"
       steps:
         - setWeight: 20
         - pause: {}
