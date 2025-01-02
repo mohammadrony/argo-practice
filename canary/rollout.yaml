@@ -26,10 +26,10 @@ spec:
       trafficRouting:
         nginx:
           stableIngress: stable
-          additionalIngressAnnotations:
-            canary-by-header: X-Canary
-            canary-by-header-value: "true"
-            canary-by-cookie: "canary"
+          # additionalIngressAnnotations:
+          #   canary-by-header: X-Canary
+          #   canary-by-header-value: "true"
+          #   canary-by-cookie: "canary"
       steps:
         - setWeight: 20
         - pause: {}
