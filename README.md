@@ -1,5 +1,7 @@
 # Argo Best Practice
 
+![repo](./images/separate-repository.png)
+
 ## Argo CD
 
 - Store kubernetes manifests in git repository.
@@ -7,16 +9,14 @@
 - Implement RBAC to restrict access to Argo CD.
 - Automated sync for continious delivery.
 
+![group](./images/group-application.png)
+
 ## Argo Rollouts
 
 - Canary deployments to gradually shift traffic to new version.
 - Blue-Green deployments to switch traffic between environment.
 - Automated rollbacks when in failure.
 - Metrics monitoring to track performance.
-
-![repo](./images/separate-repository.png)
-
-![group](./images/group-application.png)
 
 ## Secret management
 
