@@ -35,3 +35,7 @@ spec:
         - pause: { duration: 1m }
         - setWeight: 80
         - pause: { duration: 1m }
+      analysis:
+        templates:
+          - templateName: analysis
+        startingStep: 2
