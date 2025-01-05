@@ -1,10 +1,20 @@
 # Argo Best Practice
 
-## Separate repository
+## Argo CD
+
+- Store kubernetes manifests in git repository.
+- Group applications for management and visibility.
+- Implement RBAC to restrict access to Argo CD.
+- Automated sync for continious delivery.
+
+## Argo Rollouts
+
+- Canary deployments to gradually shift traffic to new version.
+- Blue-Green deployments to switch traffic between environment.
+- Automated rollbacks when in failure.
+- Metrics monitoring to track performance.
 
 ![repo](./images/separate-repository.png)
-
-## Group applications
 
 ![group](./images/group-application.png)
 
@@ -12,11 +22,6 @@
 
 - [Bitnami Sealed Secrets](https://engineering.bitnami.com/)
 - [Argo CD Vault plugin](https://github.com/argoproj-labs/argocd-vault-plugin)
-
-## RBAC configuration
-
-- Admin
-- Read-only
 
 ## Deployment practice
 
