@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: rollouts-demo
-          image: argoproj/rollouts-demo:green
+          image: argoproj/rollouts-demo:blue
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
@@ -35,7 +35,3 @@ spec:
         - pause: { duration: 1m }
         - setWeight: 80
         - pause: { duration: 1m }
-      analysis:
-        templates:
-          - templateName: analysis
-        startingStep: 2
